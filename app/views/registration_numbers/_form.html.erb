@@ -12,13 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
     <%= f.label :state_id %><br>
     <%= f.collection_select :state_id, State.all, :id, :name,prompt: "Select State" %>
   </div>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+    <div class="field">
+    <%= f.label :office %><br>
+    <%= f.text_field :office %>
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
