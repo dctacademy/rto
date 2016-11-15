@@ -15,7 +15,7 @@
     <% @localities.each do |locality| %>
       <tr>
         <td><%= locality.name %></td>
-        <td><%= locality.registration_id %></td>
+        <td><%= locality.registration_number.name %></td>
         <td><%= link_to 'Show', locality %></td>
         <td><%= link_to 'Edit', edit_locality_path(locality) %></td>
         <td><%= link_to 'Destroy', locality, method: :delete, data: { confirm: 'Are you sure?' } %></td>

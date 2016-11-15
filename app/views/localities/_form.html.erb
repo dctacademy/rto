@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :registration_id %><br>
-    <%= f.number_field :registration_id %>
+    <%= f.collection_select :registration_number_id, RegistrationNumber.all, :id, :name, prompt: "Select" %>
   </div>
   <div class="actions">
     <%= f.submit %>

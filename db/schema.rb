@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161115124928) do
+ActiveRecord::Schema.define(version: 20161115151953) do
 
   create_table "localities", force: :cascade do |t|
     t.string   "name"
-    t.integer  "registration_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "registration_number_id"
   end
 
   create_table "registration_numbers", force: :cascade do |t|

@@ -69,6 +69,6 @@ class RegistrationNumbersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def registration_number_params
-      params.require(:registration_number).permit(:name, :state_id)
+      params.require(:registration_number).permit(:name, :state_id, :office)
     end
 end
