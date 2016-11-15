@@ -11,11 +11,15 @@
 <% if user_signed_in? %>
 	Welcome <%= current_user.email %> | 
 	<%= link_to "Account Setting", edit_user_registration_path %> |
-	<%= link_to "Logout", destroy_user_session_path, method: :delete %> 
+	<%= link_to "Logout", destroy_user_session_path, method: :delete %> <br/><br/>
+
+	<%= link_to "states", states_path %> | <%= link_to "Registration Numbers", registration_numbers_path %> | <%= link_to "Localities", localities_path %>
 <% else %>
 	<%= link_to "Login", new_user_session_path %>
 	<%= link_to "Register", new_user_registration_path %>
 <% end %>
+
+<%= alert %>
 
 <%= yield %>
 
