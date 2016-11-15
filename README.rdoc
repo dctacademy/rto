@@ -1,28 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is boiler plate code to work with api in rails. The idea behind this is to setup a web service where when the user passes the rto registration number, it will return all the localities the fall into that registration
 
-Things you may want to cover:
+For Example:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* KA-05 should return {"registration_number" : "KA-05", "main_rto" : "Jayanagar", "localities" : ["Jayanagar 1st block", "Jayanagar 2nd Block", "Basavanagudi", "Chamrajpet"]}
 
 
-Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
