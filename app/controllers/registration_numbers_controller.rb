@@ -1,4 +1,6 @@
 class RegistrationNumbersController < ApplicationController
+  before_action :authenticate_user!
+  before_action :check_is_admin
   before_action :set_registration_number, only: [:show, :edit, :update, :destroy]
 
   # GET /registration_numbers
