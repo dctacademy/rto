@@ -1,6 +1,6 @@
 class LocalitiesController < ApplicationController
   before_action :authenticate_user!
-  before_action :check_is_admin
+  before_action :check_is_admin?
   before_action :set_locality, only: [:show, :edit, :update, :destroy]
 
   # GET /localities

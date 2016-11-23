@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161115151953) do
+ActiveRecord::Schema.define(version: 20161116133041) do
 
   create_table "localities", force: :cascade do |t|
     t.string   "name"
@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(version: 20161115151953) do
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.boolean  "is_admin",               default: false
+    t.string   "access_token"
+    t.integer  "request_limit",          default: 100
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

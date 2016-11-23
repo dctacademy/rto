@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   get 'home/index'
 
+  namespace :api, {format: "json"} do 
+    namespace :v1 do 
+      resources :registration_numbers
+    end
+  end
+
   devise_for :users
   resources :localities
   resources :registration_numbers
